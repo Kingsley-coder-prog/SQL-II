@@ -2,7 +2,7 @@ CREATE TABLE projects (
     id SERIAL PRIMARY KEY,
     -- Postgresql
     title VARCHAR(300) NOT NULL,
-    deadline DATE,
+    deadline DATE
 );
 CREATE TABLE company_buildings (
     id SERIAL PRIMARY KEY,
@@ -43,4 +43,4 @@ CREATE TABLE projects_employees (
     -- Postgresql
     employee_id INT REFERENCES employees ON DELETE CASCADE,
     project_id INT REFERENCES projects ON DELETE CASCADE
-)
+);
